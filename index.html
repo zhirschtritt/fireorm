@@ -63,9 +63,10 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="fireorm-">fireorm🔥</h1>
-				<p><a href="https://travis-ci.com/wovalle/fireorm"><img src="https://travis-ci.com/wovalle/fireorm.svg?token=KsyisFHzgCusk2sapuJe&branch=master" alt="Build Status"></a>
-					<a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/v/fireorm.svg?style=flat" alt="NPM Version"></a>
+				<p><a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/v/fireorm.svg?style=flat" alt="NPM Version"></a>
+					<a href="https://travis-ci.com/wovalle/fireorm"><img src="https://travis-ci.com/wovalle/fireorm.svg?token=KsyisFHzgCusk2sapuJe&branch=master" alt="Build Status"></a>
 					<a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Language-Typescript-Blue.svg" alt="Typescript lang"></a>
+					<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="All Contributors"></a>
 				<a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/l/fireorm.svg?style=flat" alt="License"></a></p>
 				<p><em>:warning::heavy</em>exclamation_mark: Caution: This project is in <strong>active</strong> development. Documentation may not be totally up to date. APIs may change until 1.0._</p>
 				<p>Fireorm is a tiny wrapper on top of firebase-admin that makes life easier when dealing with a Firestore database. Fireorm tries to ease the development of apps that rely on Firestore at the database layer by abstracting the access layer providing and familiar repository pattern. It basically helps us not worrying about Firestore details and focusing in what matters: adding cool new features!</p>
@@ -74,7 +75,7 @@
 				<ol>
 					<li>Install the npm package:</li>
 				</ol>
-				<pre><code class="language-bash">yarn add typeorm  <span class="hljs-comment">#or npm install typeorm</span></code></pre>
+				<pre><code class="language-bash">yarn add fireorm  <span class="hljs-comment">#or npm install fireorm</span></code></pre>
 				<ol start="2">
 					<li><a href="https://firebase.google.com/docs/firestore/quickstart#initialize">Initialize</a> your firestore application:</li>
 				</ol>
@@ -127,7 +128,7 @@ todo.done = <span class="hljs-literal">false</span>;
 <span class="hljs-keyword">await</span> todoRepository.update(mySuperTodoDocument); <span class="hljs-comment">// Update todo</span>
 <span class="hljs-keyword">await</span> todoRepository.delete(mySuperTodoDocument.id); <span class="hljs-comment">// Delete todo</span></code></pre>
 				<h2 id="development">Development</h2>
-				<h4 id="initial-setup">Initial Setup</h4>
+				<h3 id="initial-setup">Initial Setup</h3>
 				<ol>
 					<li>Clone the project from github:</li>
 				</ol>
@@ -136,33 +137,47 @@ todo.done = <span class="hljs-literal">false</span>;
 					<li>Install the dependencies.</li>
 				</ol>
 				<pre><code class="language-bash">yarn install <span class="hljs-comment"># npm install</span></code></pre>
-				<h4 id="testing">Testing</h4>
+				<h3 id="testing">Testing</h3>
 				<p>You can run the tests with the following command:</p>
 				<pre><code class="language-bash">yarn <span class="hljs-built_in">test</span> <span class="hljs-comment"># or npm test</span></code></pre>
 				<p>Test files must follow the naming convention <code>*.test.ts</code> and use <a href="https://mochajs.org/">mocha</a> as the test runner.</p>
-				<h4 id="release-a-new-version">Release a new version</h4>
-				<ul>
-					<li>To release a new version to npm, first we have to create a new tag:</li>
-				</ul>
-				<pre><code class="language-bash">npm version [ major | minor | patch ] -m <span class="hljs-string">"Relasing version"</span>
+				<h3 id="committing">Committing</h3>
+				<p>This repo uses <a href="https://www.conventionalcommits.org/">Conventional Commits</a> as the commit messages convention.</p>
+				<h3 id="release-a-new-version">Release a new version</h3>
+				<p>This repo uses <a href="https://github.com/semantic-release/semantic-release">Sematic Release</a> to automatically release new versions as soon as they land on master.</p>
+				<details>
+					<summary>Manual Release</summary>
+					If, by any reason, a manual release must be done, these are the instructions:
+					<ul>
+						<li>To release a new version to npm, first we have to create a new tag:</li>
+					</ul>
+					<pre><code class="language-bash">npm version [ major | minor | patch ] -m <span class="hljs-string">"Relasing version"</span>
 git push --follow-tags</code></pre>
-				<ul>
-					<li>Then we can publish the package to npm registry:</li>
-				</ul>
-				<pre><code class="language-bash">npm publish</code></pre>
-				<h4 id="update-documentation">Update documentation</h4>
+					<ul>
+						<li>Then we can publish the package to npm registry:</li>
+					</ul>
+					<pre><code class="language-bash">npm publish</code></pre>
+					<ul>
+						<li>To deploy the documentation</li>
+					</ul>
+					<pre><code class="language-bash">yarn deploy:documentation <span class="hljs-comment"># or npm deploy:documentation</span></code></pre>
+				</details>
+				<h3 id="documentation">Documentation</h3>
 				<ul>
 					<li>Fireorm uses <a href="https://typedoc.org/">typedoc</a> to automatically build the API documentation, to generate it:</li>
 				</ul>
 				<pre><code class="language-bash">yarn build:documentation <span class="hljs-comment"># or npm build:documentation</span></code></pre>
-				<h4 id="deploy-documentation">Deploy documentation</h4>
-				<ul>
-					<li>API documentation is hosted in <a href="https://pages.github.com/">Github Pages</a>, to deploy a new version:</li>
-				</ul>
-				<pre><code class="language-bash">yarn deploy:documentation <span class="hljs-comment"># or npm deploy:documentation</span></code></pre>
+				<p>Documentation is automatically deployed on each commit to master and is hosted in <a href="https://pages.github.com/">Github Pages</a> in this <a href="https://wovalle.github.io/fireorm">link</a>.</p>
 				<h2 id="contributing">Contributing</h2>
-				<p>Have a bug or a feature request? Please search <a href="https://github.com/wovalle/fireorm/issues">the issues</a> to prevent duplication. If you couldn&#39;t what you were looking for, <a href="https://github.com/wovalle/fireorm/issues/new">proceed to open a new one</a>. Pull requests are welcome but they must be accomp</p>
-				<h1 id="license">License</h1>
+				<p>Have a bug or a feature request? Please search <a href="https://github.com/wovalle/fireorm/issues">the issues</a> to prevent duplication. If you couldn&#39;t what you were looking for, <a href="https://github.com/wovalle/fireorm/issues/new">proceed to open a new one</a>. Pull requests are welcome!</p>
+				<h2 id="contributors">Contributors</h2>
+				<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+				<!-- prettier-ignore -->
+				<table><tr><td align="center"><a href="http://twitter.com/wovalle"><img src="https://avatars0.githubusercontent.com/u/7854116?v=4" width="100px;" alt="Willy Ovalle"/><br /><sub><b>Willy Ovalle</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Code">💻</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Documentation">📖</a> <a href="#example-wovalle" title="Examples">💡</a> <a href="#ideas-wovalle" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-wovalle" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/mamodom"><img src="https://avatars3.githubusercontent.com/u/5097424?v=4" width="100px;" alt="Maximo Dominguez"/><br /><sub><b>Maximo Dominguez</b></sub></a><br /><a href="#ideas-mamodom" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/wovalle/fireorm/commits?author=mamodom" title="Code">💻</a></td><td align="center"><a href="https://github.com/jonesnc"><img src="https://avatars0.githubusercontent.com/u/1293145?v=4" width="100px;" alt="Nathan Jones"/><br /><sub><b>Nathan Jones</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=jonesnc" title="Code">💻</a></td></tr></table>
+				<!-- ALL-CONTRIBUTORS-LIST:END -->
+				<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+				<h2 id="license">License</h2>
 				<p>MIT © <a href="https://github.com/wovalle">Willy Ovalle</a>. See <a href="https://github.com/wovalle/fireorm/blob/master/LICENSE">LICENSE</a> for details.</p>
 			</div>
 		</div>
@@ -195,6 +210,9 @@ git push --follow-tags</code></pre>
 						<a href="classes/basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/fullband.html" class="tsd-kind-icon">Full<wbr>Band</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
@@ -211,6 +229,9 @@ git push --follow-tags</code></pre>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imetadatastorage.html" class="tsd-kind-icon">IMetadata<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iorderbyparams.html" class="tsd-kind-icon">IOrder<wbr>ByParams</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
@@ -242,13 +263,13 @@ git push --follow-tags</code></pre>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#customrepository" class="tsd-kind-icon">Custom<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#getbaserepository" class="tsd-kind-icon">Get<wbr>Base<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#getcustomrepository" class="tsd-kind-icon">Get<wbr>Custom<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#getrepository" class="tsd-kind-icon">Get<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -259,6 +280,15 @@ git push --follow-tags</code></pre>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#getfixture" class="tsd-kind-icon">get<wbr>Fixture</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getinitialdata" class="tsd-kind-icon">get<wbr>Initial<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getinitialseed" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getinitialseedwithsubcollections" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed<wbr>With<wbr>Subcollections</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmetadatastorage" class="tsd-kind-icon">get<wbr>Metadata<wbr>Storage</a>

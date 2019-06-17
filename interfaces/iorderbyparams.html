@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CollectionMetadata | fireorm</title>
+	<title>IOrderByParams | fireorm</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="collectionmetadata.html">CollectionMetadata</a>
+					<a href="iorderbyparams.html">IOrderByParams</a>
 				</li>
 			</ul>
-			<h1>Interface CollectionMetadata</h1>
+			<h1>Interface IOrderByParams</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CollectionMetadata</span>
+						<span class="target">IOrderByParams</span>
 					</li>
 				</ul>
 			</section>
@@ -79,8 +79,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="collectionmetadata.html#entity" class="tsd-kind-icon">entity</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="collectionmetadata.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iorderbyparams.html#directionstr" class="tsd-kind-icon">direction<wbr>Str</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iorderbyparams.html#fieldpath" class="tsd-kind-icon">field<wbr>Path</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,22 +89,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="entity" class="tsd-anchor"></a>
-					<h3>entity</h3>
-					<div class="tsd-signature tsd-kind-icon">entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span></div>
+					<a name="directionstr" class="tsd-anchor"></a>
+					<h3>direction<wbr>Str</h3>
+					<div class="tsd-signature tsd-kind-icon">direction<wbr>Str<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">OrderByDirection</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/MetadataStorage.ts#L13">src/MetadataStorage.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/types.ts#L38">src/types.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="fieldpath" class="tsd-anchor"></a>
+					<h3>field<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">field<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/MetadataStorage.ts#L14">src/MetadataStorage.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/types.ts#L37">src/types.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,21 +147,9 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="../classes/querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="collectionmetadata.html" class="tsd-kind-icon">Collection<wbr>Metadata</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="collectionmetadata.html#entity" class="tsd-kind-icon">entity</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="collectionmetadata.html#name" class="tsd-kind-icon">name</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="ientity.html" class="tsd-kind-icon">IEntity</a>
 					</li>
@@ -171,9 +159,21 @@
 					<li class=" tsd-kind-interface">
 						<a href="imetadatastorage.html" class="tsd-kind-icon">IMetadata<wbr>Storage</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iorderbyparams.html" class="tsd-kind-icon">IOrder<wbr>ByParams</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iorderbyparams.html#directionstr" class="tsd-kind-icon">direction<wbr>Str</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iorderbyparams.html#fieldpath" class="tsd-kind-icon">field<wbr>Path</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
 					</li>

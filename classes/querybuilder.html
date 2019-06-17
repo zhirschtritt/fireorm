@@ -100,6 +100,8 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="querybuilder.html#executor" class="tsd-kind-icon">executor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="querybuilder.html#limitval" class="tsd-kind-icon">limit<wbr>Val</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="querybuilder.html#orderbyobj" class="tsd-kind-icon">order<wbr>ByObj</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="querybuilder.html#queries" class="tsd-kind-icon">queries</a></li>
 							</ul>
 						</section>
@@ -107,6 +109,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#limit" class="tsd-kind-icon">limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#whereequalto" class="tsd-kind-icon">where<wbr>Equal<wbr>To</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="querybuilder.html#wheregreaterorequalthan" class="tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than</a></li>
@@ -130,7 +135,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L12">src/QueryBuilder.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L15">src/QueryBuilder.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -152,7 +157,27 @@
 					<div class="tsd-signature tsd-kind-icon">executor<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iqueryexecutor.html" class="tsd-signature-type">IQueryExecutor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L16">src/QueryBuilder.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L19">src/QueryBuilder.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="limitval" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> limit<wbr>Val</h3>
+					<div class="tsd-signature tsd-kind-icon">limit<wbr>Val<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L14">src/QueryBuilder.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="orderbyobj" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> order<wbr>ByObj</h3>
+					<div class="tsd-signature tsd-kind-icon">order<wbr>ByObj<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iorderbyparams.html" class="tsd-signature-type">IOrderByParams</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L15">src/QueryBuilder.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -162,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">queries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L12">src/QueryBuilder.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L13">src/QueryBuilder.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,10 +205,81 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#find">find</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L72">src/QueryBuilder.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L102">src/QueryBuilder.ts:102</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="limit" class="tsd-anchor"></a>
+					<h3>limit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">(</span>limitVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L75">src/QueryBuilder.ts:75</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>limitVal: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="orderbyascending" class="tsd-anchor"></a>
+					<h3>order<wbr>ByAscending</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">order<wbr>ByAscending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#orderbyascending">orderByAscending</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L80">src/QueryBuilder.ts:80</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>prop: <span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="orderbydescending" class="tsd-anchor"></a>
+					<h3>order<wbr>ByDescending</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">order<wbr>ByDescending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#orderbydescending">orderByDescending</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L91">src/QueryBuilder.ts:91</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>prop: <span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -196,8 +292,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherearraycontains">whereArrayContains</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L63">src/QueryBuilder.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L66">src/QueryBuilder.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,8 +319,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#whereequalto">whereEqualTo</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L18">src/QueryBuilder.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L21">src/QueryBuilder.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -248,8 +346,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wheregreaterorequalthan">whereGreaterOrEqualThan</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L36">src/QueryBuilder.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L39">src/QueryBuilder.ts:39</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -274,8 +373,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wheregreaterthan">whereGreaterThan</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L27">src/QueryBuilder.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L30">src/QueryBuilder.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -300,8 +400,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherelessorequalthan">whereLessOrEqualThan</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L54">src/QueryBuilder.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L57">src/QueryBuilder.ts:57</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -326,8 +427,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherelessthan">whereLessThan</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/460d36d/src/QueryBuilder.ts#L45">src/QueryBuilder.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/be987a2/src/QueryBuilder.ts#L48">src/QueryBuilder.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -374,6 +476,9 @@
 						<a href="basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="fullband.html" class="tsd-kind-icon">Full<wbr>Band</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a>
 					</li>
 				</ul>
@@ -388,10 +493,25 @@
 								<a href="querybuilder.html#executor" class="tsd-kind-icon">executor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="querybuilder.html#limitval" class="tsd-kind-icon">limit<wbr>Val</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="querybuilder.html#orderbyobj" class="tsd-kind-icon">order<wbr>ByObj</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="querybuilder.html#queries" class="tsd-kind-icon">queries</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="querybuilder.html#find" class="tsd-kind-icon">find</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="querybuilder.html#limit" class="tsd-kind-icon">limit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="querybuilder.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="querybuilder.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="querybuilder.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a>
@@ -427,6 +547,9 @@
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/imetadatastorage.html" class="tsd-kind-icon">IMetadata<wbr>Storage</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iorderbyparams.html" class="tsd-kind-icon">IOrder<wbr>ByParams</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
 					</li>
@@ -457,13 +580,13 @@
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#customrepository" class="tsd-kind-icon">Custom<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="../globals.html#getbaserepository" class="tsd-kind-icon">Get<wbr>Base<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="../globals.html#getcustomrepository" class="tsd-kind-icon">Get<wbr>Custom<wbr>Repository</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="../globals.html#getrepository" class="tsd-kind-icon">Get<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -474,6 +597,15 @@
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="../globals.html#getfixture" class="tsd-kind-icon">get<wbr>Fixture</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#getinitialdata" class="tsd-kind-icon">get<wbr>Initial<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#getinitialseed" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#getinitialseedwithsubcollections" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed<wbr>With<wbr>Subcollections</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#getmetadatastorage" class="tsd-kind-icon">get<wbr>Metadata<wbr>Storage</a>
