@@ -127,6 +127,10 @@ todo.done = <span class="hljs-literal">false</span>;
 <span class="hljs-keyword">const</span> mySuperTodoDocument = <span class="hljs-keyword">await</span> todoRepository.findById(todoDocument.id); <span class="hljs-comment">// Read todo</span>
 <span class="hljs-keyword">await</span> todoRepository.update(mySuperTodoDocument); <span class="hljs-comment">// Update todo</span>
 <span class="hljs-keyword">await</span> todoRepository.delete(mySuperTodoDocument.id); <span class="hljs-comment">// Delete todo</span></code></pre>
+				<h3 id="firebase-complex-data-types">Firebase Complex Data Types</h3>
+				<p>Firestore has support for <a href="https://firebase.google.com/docs/firestore/manage-data/data-types">complex data types</a> such as GeoPoint and Reference. Full handling of complex data types is <a href="https://github.com/wovalle/fireorm/issues/58">being handled in this issue</a>. Temporarily, Fireorm will export <a href="https://github.com/typestack/class-transformer#working-with-nested-objects">Class Transformer&#39;s @Type</a> decorator. It receives a lamda where you have to return the type you want to cast to. <a href="https://github.com/wovalle/fireorm/blob/master/src/BaseFirestoreRepository.spec.ts#L338-L344">See GeoPoint Example</a>.</p>
+				<h4 id="limitations">Limitations</h4>
+				<p>If you want to cast GeoPoints to your custom class, it must have <code>latitude: number</code> and <code>longitude: number</code> as public class fields. Hopefully this won&#39;t be a limitation in v1.</p>
 				<h2 id="development">Development</h2>
 				<h3 id="initial-setup">Initial Setup</h3>
 				<ol>
@@ -208,6 +212,9 @@ git push --follow-tags</code></pre>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/coordinates.html" class="tsd-kind-icon">Coordinates</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/fullband.html" class="tsd-kind-icon">Full<wbr>Band</a>
