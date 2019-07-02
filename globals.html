@@ -79,6 +79,7 @@
 								<li class="tsd-kind-class"><a href="classes/band.html" class="tsd-kind-icon">Band</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/bandentity.html" class="tsd-kind-icon">Band<wbr>Entity</a></li>
 								<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a></li>
+								<li class="tsd-kind-class"><a href="classes/baserepository.html" class="tsd-kind-icon">Base<wbr>Repository</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/coordinates.html" class="tsd-kind-icon">Coordinates</a></li>
 								<li class="tsd-kind-class"><a href="classes/fullband.html" class="tsd-kind-icon">Full<wbr>Band</a></li>
 								<li class="tsd-kind-class"><a href="classes/metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a></li>
@@ -91,7 +92,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/collectionmetadata.html" class="tsd-kind-icon">Collection<wbr>Metadata</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/ientity.html" class="tsd-kind-icon">IEntity</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/ifireormqueryline.html" class="tsd-kind-icon">IFire<wbr>Orm<wbr>Query<wbr>Line</a></li>
-								<li class="tsd-kind-interface"><a href="interfaces/imetadatastorage.html" class="tsd-kind-icon">IMetadata<wbr>Storage</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/imetadatastore.html" class="tsd-kind-icon">IMetadata<wbr>Store</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/iorderbyparams.html" class="tsd-kind-icon">IOrder<wbr>ByParams</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/iqueryexecutor.html" class="tsd-kind-icon">IQuery<wbr>Executor</a></li>
@@ -106,6 +107,7 @@
 								<li class="tsd-kind-type-alias"><a href="globals.html#ifirestoreval" class="tsd-kind-icon">IFirestore<wbr>Val</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#iquerybuilderresult" class="tsd-kind-icon">IQuery<wbr>Builder<wbr>Result</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#isubcollection" class="tsd-kind-icon">ISub<wbr>Collection</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#instanstiableientity" class="tsd-kind-icon">InstanstiableIEntity</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -136,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">IFirestore<wbr>Val<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/types.ts#L15">src/types.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/types.ts#L15">src/types.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">IQuery<wbr>Builder<wbr>Result<span class="tsd-signature-symbol">:</span> <a href="interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/types.ts#L41">src/types.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/types.ts#L41">src/types.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -156,9 +158,24 @@
 					<div class="tsd-signature tsd-kind-icon">ISub<wbr>Collection<span class="tsd-signature-symbol">:</span> <a href="interfaces/irepository.html" class="tsd-signature-type">IRepository</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><a href="interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/types.ts#L63">src/types.ts:63</a></li>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/types.ts#L63">src/types.ts:63</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="instanstiableientity" class="tsd-anchor"></a>
+					<h3>InstanstiableIEntity</h3>
+					<div class="tsd-signature tsd-kind-icon">InstanstiableIEntity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/types.ts#L70">src/types.ts:70</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -167,19 +184,19 @@
 					<a name="collection" class="tsd-anchor"></a>
 					<h3>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Collection<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">Collection<span class="tsd-signature-symbol">(</span>entityName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/Decorators/Collection.ts#L4">src/Decorators/Collection.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/Decorators/Collection.ts#L4">src/Decorators/Collection.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> entityName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
@@ -190,21 +207,19 @@
 					<a name="customrepository" class="tsd-anchor"></a>
 					<h3>Custom<wbr>Repository</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Custom<wbr>Repository<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">Custom<wbr>Repository<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="globals.html#instanstiableientity" class="tsd-signature-type">InstanstiableIEntity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/Decorators/CustomRepository.ts#L4">src/Decorators/CustomRepository.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/Decorators/CustomRepository.ts#L4">src/Decorators/CustomRepository.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entity: <span class="tsd-signature-type">object</span></h5>
-									<ul class="tsd-parameters">
-									</ul>
+									<h5>entity: <a href="globals.html#instanstiableientity" class="tsd-signature-type">InstanstiableIEntity</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
@@ -221,7 +236,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/helpers.ts#L21">src/helpers.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/helpers.ts#L21">src/helpers.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -258,7 +273,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/helpers.ts#L13">src/helpers.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/helpers.ts#L13">src/helpers.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -295,7 +310,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/helpers.ts#L5">src/helpers.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/helpers.ts#L5">src/helpers.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -326,13 +341,13 @@
 					<a name="initialize" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> Initialize</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Initialize<span class="tsd-signature-symbol">(</span>firestore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Firestore</span>, storage<span class="tsd-signature-symbol">?: </span><a href="interfaces/imetadatastorage.html" class="tsd-signature-type">IMetadataStorage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">Initialize<span class="tsd-signature-symbol">(</span>firestore<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Firestore</span>, metadataStore<span class="tsd-signature-symbol">?: </span><a href="interfaces/imetadatastore.html" class="tsd-signature-type">IMetadataStore</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/MetadataStorage.ts#L50">src/MetadataStorage.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/MetadataStorage.ts#L98">src/MetadataStorage.ts:98</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -341,7 +356,7 @@
 									<h5>firestore: <span class="tsd-signature-type">Firestore</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> storage: <a href="interfaces/imetadatastorage.html" class="tsd-signature-type">IMetadataStorage</a><span class="tsd-signature-symbol"> =&nbsp;globalStorage</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> metadataStore: <a href="interfaces/imetadatastore.html" class="tsd-signature-type">IMetadataStore</a><span class="tsd-signature-symbol"> =&nbsp;globalStore</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -352,13 +367,13 @@
 					<a name="subcollection" class="tsd-anchor"></a>
 					<h3>Sub<wbr>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Sub<wbr>Collection<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">Sub<wbr>Collection<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, entityName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/Decorators/SubCollection.ts#L4">src/Decorators/SubCollection.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/Decorators/SubCollection.ts#L4">src/Decorators/SubCollection.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -367,7 +382,7 @@
 									<h5>entity: <span class="tsd-signature-type">Function</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> entityName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
@@ -384,7 +399,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/test/fixture.ts#L118">test/fixture.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/test/fixture.ts#L118">test/fixture.ts:118</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
@@ -403,7 +418,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/examples/utils/seed.ts#L3">examples/utils/seed.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/examples/utils/seed.ts#L3">examples/utils/seed.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -414,16 +429,16 @@
 					<a name="getinitialseed" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Initial<wbr>Seed</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Initial<wbr>Seed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Band</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Initial<wbr>Seed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/band.html" class="tsd-signature-type">Band</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/examples/utils/seed.ts#L43">examples/utils/seed.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/examples/utils/seed.ts#L43">examples/utils/seed.ts:43</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Band</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="classes/band.html" class="tsd-signature-type">Band</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -437,7 +452,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/examples/utils/seed.ts#L56">examples/utils/seed.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/examples/utils/seed.ts#L56">examples/utils/seed.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -448,21 +463,15 @@
 					<a name="getmetadatastorage" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Metadata<wbr>Storage</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Metadata<wbr>Storage<span class="tsd-signature-symbol">(</span>storage<span class="tsd-signature-symbol">?: </span><a href="interfaces/imetadatastorage.html" class="tsd-signature-type">IMetadataStorage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/metadatastorage.html" class="tsd-signature-type">MetadataStorage</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Metadata<wbr>Storage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/metadatastorage.html" class="tsd-signature-type">MetadataStorage</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/e57d0d8/src/MetadataStorage.ts#L38">src/MetadataStorage.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/bedb401/src/MetadataStorage.ts#L88">src/MetadataStorage.ts:88</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> storage: <a href="interfaces/imetadatastorage.html" class="tsd-signature-type">IMetadataStorage</a><span class="tsd-signature-symbol"> =&nbsp;globalStorage</span></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="classes/metadatastorage.html" class="tsd-signature-type">MetadataStorage</a></h4>
 						</li>
 					</ul>
@@ -497,6 +506,9 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/baserepository.html" class="tsd-kind-icon">Base<wbr>Repository</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/coordinates.html" class="tsd-kind-icon">Coordinates</a>
 					</li>
@@ -519,7 +531,7 @@
 						<a href="interfaces/ifireormqueryline.html" class="tsd-kind-icon">IFire<wbr>Orm<wbr>Query<wbr>Line</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/imetadatastorage.html" class="tsd-kind-icon">IMetadata<wbr>Storage</a>
+						<a href="interfaces/imetadatastore.html" class="tsd-kind-icon">IMetadata<wbr>Store</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iorderbyparams.html" class="tsd-kind-icon">IOrder<wbr>ByParams</a>
@@ -547,6 +559,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#isubcollection" class="tsd-kind-icon">ISub<wbr>Collection</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#instanstiableientity" class="tsd-kind-icon">InstanstiableIEntity</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#collection" class="tsd-kind-icon">Collection</a>
