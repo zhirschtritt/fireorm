@@ -66,7 +66,7 @@
 				<p><a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/v/fireorm.svg?style=flat" alt="NPM Version"></a>
 					<a href="https://travis-ci.com/wovalle/fireorm"><img src="https://travis-ci.com/wovalle/fireorm.svg?token=KsyisFHzgCusk2sapuJe&branch=master" alt="Build Status"></a>
 					<a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Language-Typescript-Blue.svg" alt="Typescript lang"></a>
-					<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="All Contributors"></a>
+					<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square" alt="All Contributors"></a>
 					<a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/l/fireorm.svg?style=flat" alt="License"></a>
 				<a href="https://gitter.im/fireorm/community"><img src="https://badges.gitter.im/gitterHQ/gitter.png" alt="Gitter chat"></a></p>
 				<p><em>:warning::heavy</em>exclamation_mark: Caution: This project is in <strong>active</strong> development. Documentation may not be totally up to date. APIs may change until 1.0._</p>
@@ -143,8 +143,12 @@ todo.done = <span class="hljs-literal">false</span>;
 				</ol>
 				<pre><code class="language-bash">yarn install <span class="hljs-comment"># npm install</span></code></pre>
 				<h3 id="testing">Testing</h3>
-				<p>You can run the tests with the following command:</p>
-				<pre><code class="language-bash">yarn <span class="hljs-built_in">test</span> <span class="hljs-comment"># or npm test</span></code></pre>
+				<p>Fireorm has two types of tests:</p>
+				<ul>
+					<li>Unit tests: <code>yarn test # or npm test</code></li>
+					<li>Integration tests: <code>yarn test:integration # or npm test:integration</code></li>
+				</ul>
+				<p>To be able to run the integration tests you&#39;ll need to <a href="https://firebase.google.com/docs/admin/setup#initialize_the_sdk">create a firebase service account</a> and declare some <a href="https://github.com/wovalle/fireorm/blob/master/test/setup.ts#L5-L13">environment variables</a>.</p>
 				<p>Test files must follow the naming convention <code>*.test.ts</code> and use <a href="https://mochajs.org/">mocha</a> as the test runner.</p>
 				<h3 id="committing">Committing</h3>
 				<p>This repo uses <a href="https://www.conventionalcommits.org/">Conventional Commits</a> as the commit messages convention.</p>
@@ -179,7 +183,7 @@ git push --follow-tags</code></pre>
 				<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
 				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 				<!-- prettier-ignore -->
-				<table><tr><td align="center"><a href="http://twitter.com/wovalle"><img src="https://avatars0.githubusercontent.com/u/7854116?v=4" width="100px;" alt="Willy Ovalle"/><br /><sub><b>Willy Ovalle</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Code">💻</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Documentation">📖</a> <a href="#example-wovalle" title="Examples">💡</a> <a href="#ideas-wovalle" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-wovalle" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/mamodom"><img src="https://avatars3.githubusercontent.com/u/5097424?v=4" width="100px;" alt="Maximo Dominguez"/><br /><sub><b>Maximo Dominguez</b></sub></a><br /><a href="#ideas-mamodom" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/wovalle/fireorm/commits?author=mamodom" title="Code">💻</a></td><td align="center"><a href="https://github.com/jonesnc"><img src="https://avatars0.githubusercontent.com/u/1293145?v=4" width="100px;" alt="Nathan Jones"/><br /><sub><b>Nathan Jones</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=jonesnc" title="Code">💻</a></td></tr></table>
+				<table><tr><td align="center"><a href="http://twitter.com/wovalle"><img src="https://avatars0.githubusercontent.com/u/7854116?v=4" width="100px;" alt="Willy Ovalle"/><br /><sub><b>Willy Ovalle</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Code">💻</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Documentation">📖</a> <a href="#example-wovalle" title="Examples">💡</a> <a href="#ideas-wovalle" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-wovalle" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/mamodom"><img src="https://avatars3.githubusercontent.com/u/5097424?v=4" width="100px;" alt="Maximo Dominguez"/><br /><sub><b>Maximo Dominguez</b></sub></a><br /><a href="#ideas-mamodom" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/wovalle/fireorm/commits?author=mamodom" title="Code">💻</a></td><td align="center"><a href="https://github.com/jonesnc"><img src="https://avatars0.githubusercontent.com/u/1293145?v=4" width="100px;" alt="Nathan Jones"/><br /><sub><b>Nathan Jones</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=jonesnc" title="Code">💻</a></td><td align="center"><a href="https://github.com/skalashnyk"><img src="https://avatars3.githubusercontent.com/u/18640514?v=4" width="100px;" alt="Sergii Kalashnyk"/><br /><sub><b>Sergii Kalashnyk</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=skalashnyk" title="Code">💻</a></td></tr></table>
 				<!-- ALL-CONTRIBUTORS-LIST:END -->
 				<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
 				<h2 id="license">License</h2>
@@ -205,11 +209,8 @@ git push --follow-tags</code></pre>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/album.html" class="tsd-kind-icon">Album</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/band.html" class="tsd-kind-icon">Band</a>
-					</li>
 					<li class=" tsd-kind-class tsd-is-external">
-						<a href="classes/bandentity.html" class="tsd-kind-icon">Band<wbr>Entity</a>
+						<a href="classes/band.html" class="tsd-kind-icon">Band</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
@@ -219,9 +220,6 @@ git push --follow-tags</code></pre>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/coordinates.html" class="tsd-kind-icon">Coordinates</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/fullband.html" class="tsd-kind-icon">Full<wbr>Band</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a>
@@ -295,14 +293,8 @@ git push --follow-tags</code></pre>
 					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#getfixture" class="tsd-kind-icon">get<wbr>Fixture</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#getinitialdata" class="tsd-kind-icon">get<wbr>Initial<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getinitialseed" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getinitialseedwithsubcollections" class="tsd-kind-icon">get<wbr>Initial<wbr>Seed<wbr>With<wbr>Subcollections</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmetadatastorage" class="tsd-kind-icon">get<wbr>Metadata<wbr>Storage</a>
