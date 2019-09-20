@@ -84,6 +84,7 @@
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a></li>
+					<li><a href="../classes/transactionrepository.html" class="tsd-signature-type">TransactionRepository</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -111,19 +112,19 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#partialby" class="tsd-signature-type">PartialBy</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"id"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L10">src/types.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L10">src/types.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<h5>item: <a href="../globals.html#partialby" class="tsd-signature-type">PartialBy</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"id"</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -140,7 +141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L12">src/types.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L12">src/types.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -163,7 +164,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L9">src/types.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L9">src/types.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -180,13 +181,13 @@
 					<a name="limit" class="tsd-anchor"></a>
 					<h3>limit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">(</span>limitVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">(</span>limitVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L6">src/types.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L6">src/types.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -195,7 +196,7 @@
 									<h5>limitVal: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -203,13 +204,13 @@
 					<a name="orderbyascending" class="tsd-anchor"></a>
 					<h3>order<wbr>ByAscending</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">order<wbr>ByAscending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">order<wbr>ByAscending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L7">src/types.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L7">src/types.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -218,7 +219,7 @@
 									<h5>prop: <span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -226,13 +227,13 @@
 					<a name="orderbydescending" class="tsd-anchor"></a>
 					<h3>order<wbr>ByDescending</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">order<wbr>ByDescending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">order<wbr>ByDescending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L8">src/types.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L8">src/types.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -241,7 +242,7 @@
 									<h5>prop: <span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../classes/querybuilder.html" class="tsd-signature-type">QueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -255,7 +256,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/7b6d78f/src/types.ts#L11">src/types.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/types.ts#L11">src/types.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,6 +287,9 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/firestoreoperators.html" class="tsd-kind-icon">Firestore<wbr>Operators</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/abstractfirestorerepository.html" class="tsd-kind-icon">Abstract<wbr>Firestore<wbr>Repository</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="../classes/album.html" class="tsd-kind-icon">Album</a>
 					</li>
@@ -301,11 +305,17 @@
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="../classes/coordinates.html" class="tsd-kind-icon">Coordinates</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/firestorebatchrepository.html" class="tsd-kind-icon">Firestore<wbr>Batch<wbr>Repository</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="../classes/metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="../classes/querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/transactionrepository.html" class="tsd-kind-icon">Transaction<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="collectionmetadata.html" class="tsd-kind-icon">Collection<wbr>Metadata</a>
@@ -379,6 +389,12 @@
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#instanstiableientity" class="tsd-kind-icon">InstanstiableIEntity</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#partialby" class="tsd-kind-icon">Partial<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#withoptionalid" class="tsd-kind-icon">With<wbr>Optional<wbr>Id</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#collection" class="tsd-kind-icon">Collection</a>
 					</li>
@@ -426,6 +442,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -474,7 +491,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

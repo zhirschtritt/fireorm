@@ -62,17 +62,21 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="fireorm-">fireorm🔥</h1>
+				<a href="#fireorm🔥" id="fireorm🔥" style="color: inherit; text-decoration: none;">
+					<h1>fireorm🔥</h1>
+				</a>
 				<p><a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/v/fireorm.svg?style=flat" alt="NPM Version"></a>
 					<a href="https://travis-ci.com/wovalle/fireorm"><img src="https://travis-ci.com/wovalle/fireorm.svg?token=KsyisFHzgCusk2sapuJe&branch=master" alt="Build Status"></a>
 					<a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Language-Typescript-Blue.svg" alt="Typescript lang"></a>
 					<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square" alt="All Contributors"></a>
 					<a href="https://www.npmjs.com/package/fireorm"><img src="https://img.shields.io/npm/l/fireorm.svg?style=flat" alt="License"></a>
 				<a href="https://gitter.im/fireorm/community"><img src="https://badges.gitter.im/gitterHQ/gitter.png" alt="Gitter chat"></a></p>
-				<p><em>:warning::heavy</em>exclamation_mark: Caution: This project is in <strong>active</strong> development. Documentation may not be totally up to date. APIs may change until 1.0._</p>
+				<p><em>:warning::heavy_exclamation_mark: Caution: This project is in <strong>active</strong> development. Documentation may not be totally up to date. APIs may change until 1.0.</em></p>
 				<p>Fireorm is a tiny wrapper on top of firebase-admin that makes life easier when dealing with a Firestore database. Fireorm tries to ease the development of apps that rely on Firestore at the database layer by abstracting the access layer providing and familiar repository pattern. It basically helps us not worrying about Firestore details and focusing in what matters: adding cool new features!</p>
 				<p>You can read more about the motivations and features of fireorm <a href="https://medium.com/p/ba7734644684">on its introductory post</a>. Also, the <a href="https://wovalle.github.io/fireorm">API documentation</a> is available.</p>
-				<h2 id="usage">Usage</h2>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
 				<ol>
 					<li>Install the npm package:</li>
 				</ol>
@@ -128,12 +132,20 @@ todo.done = <span class="hljs-literal">false</span>;
 <span class="hljs-keyword">const</span> mySuperTodoDocument = <span class="hljs-keyword">await</span> todoRepository.findById(todoDocument.id); <span class="hljs-comment">// Read todo</span>
 <span class="hljs-keyword">await</span> todoRepository.update(mySuperTodoDocument); <span class="hljs-comment">// Update todo</span>
 <span class="hljs-keyword">await</span> todoRepository.delete(mySuperTodoDocument.id); <span class="hljs-comment">// Delete todo</span></code></pre>
-				<h3 id="firebase-complex-data-types">Firebase Complex Data Types</h3>
+				<a href="#firebase-complex-data-types" id="firebase-complex-data-types" style="color: inherit; text-decoration: none;">
+					<h3>Firebase Complex Data Types</h3>
+				</a>
 				<p>Firestore has support for <a href="https://firebase.google.com/docs/firestore/manage-data/data-types">complex data types</a> such as GeoPoint and Reference. Full handling of complex data types is <a href="https://github.com/wovalle/fireorm/issues/58">being handled in this issue</a>. Temporarily, Fireorm will export <a href="https://github.com/typestack/class-transformer#working-with-nested-objects">Class Transformer&#39;s @Type</a> decorator. It receives a lamda where you have to return the type you want to cast to. <a href="https://github.com/wovalle/fireorm/blob/master/src/BaseFirestoreRepository.spec.ts#L338-L344">See GeoPoint Example</a>.</p>
-				<h4 id="limitations">Limitations</h4>
+				<a href="#limitations" id="limitations" style="color: inherit; text-decoration: none;">
+					<h4>Limitations</h4>
+				</a>
 				<p>If you want to cast GeoPoints to your custom class, it must have <code>latitude: number</code> and <code>longitude: number</code> as public class fields. Hopefully this won&#39;t be a limitation in v1.</p>
-				<h2 id="development">Development</h2>
-				<h3 id="initial-setup">Initial Setup</h3>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<a href="#initial-setup" id="initial-setup" style="color: inherit; text-decoration: none;">
+					<h3>Initial Setup</h3>
+				</a>
 				<ol>
 					<li>Clone the project from github:</li>
 				</ol>
@@ -142,7 +154,9 @@ todo.done = <span class="hljs-literal">false</span>;
 					<li>Install the dependencies.</li>
 				</ol>
 				<pre><code class="language-bash">yarn install <span class="hljs-comment"># npm install</span></code></pre>
-				<h3 id="testing">Testing</h3>
+				<a href="#testing" id="testing" style="color: inherit; text-decoration: none;">
+					<h3>Testing</h3>
+				</a>
 				<p>Fireorm has two types of tests:</p>
 				<ul>
 					<li>Unit tests: <code>yarn test # or npm test</code></li>
@@ -150,9 +164,13 @@ todo.done = <span class="hljs-literal">false</span>;
 				</ul>
 				<p>To be able to run the integration tests you&#39;ll need to <a href="https://firebase.google.com/docs/admin/setup#initialize_the_sdk">create a firebase service account</a> and declare some <a href="https://github.com/wovalle/fireorm/blob/master/test/setup.ts#L5-L13">environment variables</a>.</p>
 				<p>Test files must follow the naming convention <code>*.test.ts</code> and use <a href="https://mochajs.org/">mocha</a> as the test runner.</p>
-				<h3 id="committing">Committing</h3>
+				<a href="#committing" id="committing" style="color: inherit; text-decoration: none;">
+					<h3>Committing</h3>
+				</a>
 				<p>This repo uses <a href="https://www.conventionalcommits.org/">Conventional Commits</a> as the commit messages convention.</p>
-				<h3 id="release-a-new-version">Release a new version</h3>
+				<a href="#release-a-new-version" id="release-a-new-version" style="color: inherit; text-decoration: none;">
+					<h3>Release a new version</h3>
+				</a>
 				<p>This repo uses <a href="https://github.com/semantic-release/semantic-release">Sematic Release</a> to automatically release new versions as soon as they land on master.</p>
 				<details>
 					<summary>Manual Release</summary>
@@ -171,22 +189,30 @@ git push --follow-tags</code></pre>
 					</ul>
 					<pre><code class="language-bash">yarn deploy:documentation <span class="hljs-comment"># or npm deploy:documentation</span></code></pre>
 				</details>
-				<h3 id="documentation">Documentation</h3>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h3>Documentation</h3>
+				</a>
 				<ul>
 					<li>Fireorm uses <a href="https://typedoc.org/">typedoc</a> to automatically build the API documentation, to generate it:</li>
 				</ul>
 				<pre><code class="language-bash">yarn build:documentation <span class="hljs-comment"># or npm build:documentation</span></code></pre>
 				<p>Documentation is automatically deployed on each commit to master and is hosted in <a href="https://pages.github.com/">Github Pages</a> in this <a href="https://wovalle.github.io/fireorm">link</a>.</p>
-				<h2 id="contributing">Contributing</h2>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
 				<p>Have a bug or a feature request? Please search <a href="https://github.com/wovalle/fireorm/issues">the issues</a> to prevent duplication. If you couldn&#39;t what you were looking for, <a href="https://github.com/wovalle/fireorm/issues/new">proceed to open a new one</a>. Pull requests are welcome!</p>
-				<h2 id="contributors">Contributors</h2>
+				<a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
+					<h2>Contributors</h2>
+				</a>
 				<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
 				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 				<!-- prettier-ignore -->
 				<table><tr><td align="center"><a href="http://twitter.com/wovalle"><img src="https://avatars0.githubusercontent.com/u/7854116?v=4" width="100px;" alt="Willy Ovalle"/><br /><sub><b>Willy Ovalle</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Code">💻</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Documentation">📖</a> <a href="#example-wovalle" title="Examples">💡</a> <a href="#ideas-wovalle" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-wovalle" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/wovalle/fireorm/commits?author=wovalle" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/mamodom"><img src="https://avatars3.githubusercontent.com/u/5097424?v=4" width="100px;" alt="Maximo Dominguez"/><br /><sub><b>Maximo Dominguez</b></sub></a><br /><a href="#ideas-mamodom" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/wovalle/fireorm/commits?author=mamodom" title="Code">💻</a></td><td align="center"><a href="https://github.com/jonesnc"><img src="https://avatars0.githubusercontent.com/u/1293145?v=4" width="100px;" alt="Nathan Jones"/><br /><sub><b>Nathan Jones</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=jonesnc" title="Code">💻</a></td><td align="center"><a href="https://github.com/skalashnyk"><img src="https://avatars3.githubusercontent.com/u/18640514?v=4" width="100px;" alt="Sergii Kalashnyk"/><br /><sub><b>Sergii Kalashnyk</b></sub></a><br /><a href="https://github.com/wovalle/fireorm/commits?author=skalashnyk" title="Code">💻</a></td></tr></table>
 				<!-- ALL-CONTRIBUTORS-LIST:END -->
 				<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
-				<h2 id="license">License</h2>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
 				<p>MIT © <a href="https://github.com/wovalle">Willy Ovalle</a>. See <a href="https://github.com/wovalle/fireorm/blob/master/LICENSE">LICENSE</a> for details.</p>
 			</div>
 		</div>
@@ -206,6 +232,9 @@ git push --follow-tags</code></pre>
 					<li class=" tsd-kind-enum">
 						<a href="enums/firestoreoperators.html" class="tsd-kind-icon">Firestore<wbr>Operators</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/abstractfirestorerepository.html" class="tsd-kind-icon">Abstract<wbr>Firestore<wbr>Repository</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/album.html" class="tsd-kind-icon">Album</a>
 					</li>
@@ -221,11 +250,17 @@ git push --follow-tags</code></pre>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/coordinates.html" class="tsd-kind-icon">Coordinates</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/firestorebatchrepository.html" class="tsd-kind-icon">Firestore<wbr>Batch<wbr>Repository</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/metadatastorage.html" class="tsd-kind-icon">Metadata<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="classes/querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/transactionrepository.html" class="tsd-kind-icon">Transaction<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/collectionmetadata.html" class="tsd-kind-icon">Collection<wbr>Metadata</a>
@@ -271,6 +306,12 @@ git push --follow-tags</code></pre>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#instanstiableientity" class="tsd-kind-icon">InstanstiableIEntity</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#partialby" class="tsd-kind-icon">Partial<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#withoptionalid" class="tsd-kind-icon">With<wbr>Optional<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#collection" class="tsd-kind-icon">Collection</a>
@@ -319,6 +360,7 @@ git push --follow-tags</code></pre>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -367,7 +409,7 @@ git push --follow-tags</code></pre>
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>

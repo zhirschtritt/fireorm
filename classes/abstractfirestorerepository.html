@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseFirestoreRepository | fireorm</title>
+	<title>AbstractFirestoreRepository | fireorm</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="basefirestorerepository.html">BaseFirestoreRepository</a>
+					<a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>
 				</li>
 			</ul>
-			<h1>Class BaseFirestoreRepository&lt;T&gt;</h1>
+			<h1>Class AbstractFirestoreRepository&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -76,10 +76,18 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="abstractfirestorerepository.html" class="tsd-signature-type">AbstractFirestoreRepository</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="baserepository.html" class="tsd-signature-type">BaseRepository</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">BaseFirestoreRepository</span>
+								<span class="target">AbstractFirestoreRepository</span>
+								<ul class="tsd-hierarchy">
+									<li>
+										<a href="transactionrepository.html" class="tsd-signature-type">TransactionRepository</a>
+									</li>
+									<li>
+										<a href="basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -90,7 +98,6 @@
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><a href="../interfaces/iqueryexecutor.html" class="tsd-signature-type">IQueryExecutor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><a href="../interfaces/irepository.html" class="tsd-signature-type">IRepository</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -100,46 +107,39 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="basefirestorerepository.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="abstractfirestorerepository.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#colmetadata" class="tsd-kind-icon">col<wbr>Metadata</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#colname" class="tsd-kind-icon">col<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#collectiontype" class="tsd-kind-icon">collection<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#docid" class="tsd-kind-icon">doc<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="basefirestorerepository.html#firestorecolref" class="tsd-kind-icon">firestore<wbr>Col<wbr>Ref</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#subcolmetadata" class="tsd-kind-icon">sub<wbr>Col<wbr>Metadata</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#subcolname" class="tsd-kind-icon">sub<wbr>Col<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#colmetadata" class="tsd-kind-icon">col<wbr>Metadata</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#colname" class="tsd-kind-icon">col<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#collectiontype" class="tsd-kind-icon">collection<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#docid" class="tsd-kind-icon">doc<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#subcolmetadata" class="tsd-kind-icon">sub<wbr>Col<wbr>Metadata</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#subcolname" class="tsd-kind-icon">sub<wbr>Col<wbr>Name</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#create" class="tsd-kind-icon">create</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#createbatch" class="tsd-kind-icon">create<wbr>Batch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#delete" class="tsd-kind-icon">delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="basefirestorerepository.html#execute" class="tsd-kind-icon">execute</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#extracttfromcolsnap" class="tsd-kind-icon">extractTFrom<wbr>Col<wbr>Snap</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#extracttfromdocsnap" class="tsd-kind-icon">extractTFrom<wbr>Doc<wbr>Snap</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#find" class="tsd-kind-icon">find</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#findbyid" class="tsd-kind-icon">find<wbr>ById</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#initializesubcollections" class="tsd-kind-icon">initialize<wbr>Sub<wbr>Collections</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#limit" class="tsd-kind-icon">limit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#runtransaction" class="tsd-kind-icon">run<wbr>Transaction</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#toserializableobject" class="tsd-kind-icon">to<wbr>Serializable<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="basefirestorerepository.html#transformfirestoretypes" class="tsd-kind-icon">transform<wbr>Firestore<wbr>Types</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basefirestorerepository.html#update" class="tsd-kind-icon">update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#whereequalto" class="tsd-kind-icon">where<wbr>Equal<wbr>To</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#wheregreaterorequalthan" class="tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#wheregreaterthan" class="tsd-kind-icon">where<wbr>Greater<wbr>Than</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#wherelessorequalthan" class="tsd-kind-icon">where<wbr>Less<wbr>OrEqual<wbr>Than</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="basefirestorerepository.html#wherelessthan" class="tsd-kind-icon">where<wbr>Less<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#execute" class="tsd-kind-icon">execute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#extracttfromcolsnap" class="tsd-kind-icon">extractTFrom<wbr>Col<wbr>Snap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#extracttfromdocsnap" class="tsd-kind-icon">extractTFrom<wbr>Doc<wbr>Snap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#initializesubcollections" class="tsd-kind-icon">initialize<wbr>Sub<wbr>Collections</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#limit" class="tsd-kind-icon">limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#toserializableobject" class="tsd-kind-icon">to<wbr>Serializable<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="abstractfirestorerepository.html#transformfirestoretypes" class="tsd-kind-icon">transform<wbr>Firestore<wbr>Types</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#whereequalto" class="tsd-kind-icon">where<wbr>Equal<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#wheregreaterorequalthan" class="tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#wheregreaterthan" class="tsd-kind-icon">where<wbr>Greater<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#wherelessorequalthan" class="tsd-kind-icon">where<wbr>Less<wbr>OrEqual<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="abstractfirestorerepository.html#wherelessthan" class="tsd-kind-icon">where<wbr>Less<wbr>Than</a></li>
 							</ul>
 						</section>
 					</div>
@@ -147,126 +147,93 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Firestore<wbr>Repository<span class="tsd-signature-symbol">(</span>colName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Firestore<wbr>Repository<span class="tsd-signature-symbol">(</span>colName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, docId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, subColName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Abstract<wbr>Firestore<wbr>Repository<span class="tsd-signature-symbol">(</span>nameOrConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Function</span>, docId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, subColName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="abstractfirestorerepository.html" class="tsd-signature-type">AbstractFirestoreRepository</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L22">src/BaseFirestoreRepository.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L31">src/AbstractFirestoreRepository.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>colName: <span class="tsd-signature-type">string</span></h5>
+									<h5>nameOrConstructor: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Function</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> docId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subColName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overrides <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#constructor">constructor</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L24">src/BaseFirestoreRepository.ts:24</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>colName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>docId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>subColName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="basefirestorerepository.html" class="tsd-signature-type">BaseFirestoreRepository</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="abstractfirestorerepository.html" class="tsd-signature-type">AbstractFirestoreRepository</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="colmetadata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> col<wbr>Metadata</h3>
 					<div class="tsd-signature tsd-kind-icon">col<wbr>Metadata<span class="tsd-signature-symbol">:</span> <a href="../interfaces/collectionmetadata.html" class="tsd-signature-type">CollectionMetadata</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#colmetadata">colMetadata</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L27">src/AbstractFirestoreRepository.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="colname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> col<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">col<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#colname">colName</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L29">src/AbstractFirestoreRepository.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="collectiontype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> collection<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">collection<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/firestorecollectiontype.html" class="tsd-signature-type">FirestoreCollectionType</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#collectiontype">collectionType</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L28">src/AbstractFirestoreRepository.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="docid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> doc<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">doc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#docid">docId</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L30">src/AbstractFirestoreRepository.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="firestorecolref" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> firestore<wbr>Col<wbr>Ref</h3>
-					<div class="tsd-signature tsd-kind-icon">firestore<wbr>Col<wbr>Ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CollectionReference</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L22">src/BaseFirestoreRepository.ts:22</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="subcolmetadata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> sub<wbr>Col<wbr>Metadata</h3>
 					<div class="tsd-signature tsd-kind-icon">sub<wbr>Col<wbr>Metadata<span class="tsd-signature-symbol">:</span> <a href="../interfaces/subcollectionmetadata.html" class="tsd-signature-type">SubCollectionMetadata</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#subcolmetadata">subColMetadata</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L26">src/AbstractFirestoreRepository.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="subcolname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> sub<wbr>Col<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">sub<wbr>Col<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#subcolname">subColName</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L31">src/AbstractFirestoreRepository.ts:31</a></li>
 						</ul>
@@ -276,87 +243,40 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="create" class="tsd-anchor"></a>
-					<h3>create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L52">src/BaseFirestoreRepository.ts:52</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>item: <span class="tsd-signature-type">T</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="createbatch" class="tsd-anchor"></a>
-					<h3>create<wbr>Batch</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Batch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="firestorebatchrepository.html" class="tsd-signature-type">FirestoreBatchRepository</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L104">src/BaseFirestoreRepository.ts:104</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="firestorebatchrepository.html" class="tsd-signature-type">FirestoreBatchRepository</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ientity.html" class="tsd-signature-type">IEntity</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="delete" class="tsd-anchor"></a>
-					<h3>delete</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/irepository.html">IRepository</a>.<a href="../interfaces/irepository.html#delete">delete</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L87">src/BaseFirestoreRepository.ts:87</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="execute" class="tsd-anchor"></a>
-					<h3>execute</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>queries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">&gt;</span>, limitVal<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, orderByObj<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iorderbyparams.html" class="tsd-signature-type">IOrderByParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> execute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>queries<span class="tsd-signature-symbol">: </span><a href="../interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">[]</span>, limitVal<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, orderByObj<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iorderbyparams.html" class="tsd-signature-type">IOrderByParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#execute">execute</a></p>
+								<p>Implementation of <a href="../interfaces/iqueryexecutor.html">IQueryExecutor</a>.<a href="../interfaces/iqueryexecutor.html#execute">execute</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L111">src/BaseFirestoreRepository.ts:111</a></li>
+									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L297">src/AbstractFirestoreRepository.ts:297</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes all the queries stored by QueryBuilder and executes them.
+									Must be implemented by base repositores</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>abstract</dt>
+									<dd></dd>
+									<dt>memberof</dt>
+									<dd><p>AbstractFirestoreRepository</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>queries: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>queries: <a href="../interfaces/ifireormqueryline.html" class="tsd-signature-type">IFireOrmQueryLine</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>list of queries stored in
+										QueryBuilder</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> limitVal: <span class="tsd-signature-type">number</span></h5>
@@ -366,19 +286,20 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>results from firestore converted into
+							entities <T></p>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="extracttfromcolsnap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> extractTFrom<wbr>Col<wbr>Snap</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">extractTFrom<wbr>Col<wbr>Snap<span class="tsd-signature-symbol">(</span>q<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">QuerySnapshot</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#extracttfromcolsnap">extractTFromColSnap</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L114">src/AbstractFirestoreRepository.ts:114</a></li>
 								</ul>
@@ -393,16 +314,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="extracttfromdocsnap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> extractTFrom<wbr>Doc<wbr>Snap</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">extractTFrom<wbr>Doc<wbr>Snap<span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DocumentSnapshot</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#extracttfromdocsnap">extractTFromDocSnap</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L99">src/AbstractFirestoreRepository.ts:99</a></li>
 								</ul>
@@ -417,17 +337,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="find" class="tsd-anchor"></a>
 					<h3>find</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">find<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#find">find</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#find">find</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L278">src/AbstractFirestoreRepository.ts:278</a></li>
 								</ul>
@@ -448,40 +367,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="findbyid" class="tsd-anchor"></a>
-					<h3>find<wbr>ById</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/irepository.html">IRepository</a>.<a href="../interfaces/irepository.html#findbyid">findById</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L45">src/BaseFirestoreRepository.ts:45</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="initializesubcollections" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> initialize<wbr>Sub<wbr>Collections</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">initialize<wbr>Sub<wbr>Collections<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#initializesubcollections">initializeSubCollections</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L84">src/AbstractFirestoreRepository.ts:84</a></li>
 								</ul>
@@ -496,17 +390,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="limit" class="tsd-anchor"></a>
 					<h3>limit</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">(</span>limitVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/irepository.html">IRepository</a>.<a href="../interfaces/irepository.html#limit">limit</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#limit">limit</a></p>
+								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#limit">limit</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L233">src/AbstractFirestoreRepository.ts:233</a></li>
 								</ul>
@@ -538,17 +431,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="orderbyascending" class="tsd-anchor"></a>
 					<h3>order<wbr>ByAscending</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">order<wbr>ByAscending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#orderbyascending">orderByAscending</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#orderbyascending">orderByAscending</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L253">src/AbstractFirestoreRepository.ts:253</a></li>
 								</ul>
@@ -580,17 +472,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="orderbydescending" class="tsd-anchor"></a>
 					<h3>order<wbr>ByDescending</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">order<wbr>ByDescending<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#orderbydescending">orderByDescending</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#orderbydescending">orderByDescending</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L267">src/AbstractFirestoreRepository.ts:267</a></li>
 								</ul>
@@ -622,57 +513,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="runtransaction" class="tsd-anchor"></a>
-					<h3>run<wbr>Transaction</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>Transaction<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L92">src/BaseFirestoreRepository.ts:92</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>executor: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tran<span class="tsd-signature-symbol">: </span><a href="transactionrepository.html" class="tsd-signature-type">TransactionRepository</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>tran: <a href="transactionrepository.html" class="tsd-signature-type">TransactionRepository</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="toserializableobject" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> to<wbr>Serializable<wbr>Object</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">to<wbr>Serializable<wbr>Object<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#toserializableobject">toSerializableObject</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L62">src/AbstractFirestoreRepository.ts:62</a></li>
 								</ul>
@@ -687,16 +536,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="transformfirestoretypes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> transform<wbr>Firestore<wbr>Types</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">transform<wbr>Firestore<wbr>Types<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#transformfirestoretypes">transformFirestoreTypes</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L69">src/AbstractFirestoreRepository.ts:69</a></li>
 								</ul>
@@ -712,39 +560,15 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>update</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/BaseFirestoreRepository.ts#L79">src/BaseFirestoreRepository.ts:79</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>item: <span class="tsd-signature-type">T</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="wherearraycontains" class="tsd-anchor"></a>
 					<h3>where<wbr>Array<wbr>Contains</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Array<wbr>Contains<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherearraycontains">whereArrayContains</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#wherearraycontains">whereArrayContains</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L216">src/AbstractFirestoreRepository.ts:216</a></li>
 								</ul>
@@ -782,17 +606,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="whereequalto" class="tsd-anchor"></a>
 					<h3>where<wbr>Equal<wbr>To</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Equal<wbr>To<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#whereequalto">whereEqualTo</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#whereequalto">whereEqualTo</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L129">src/AbstractFirestoreRepository.ts:129</a></li>
 								</ul>
@@ -830,17 +653,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="wheregreaterorequalthan" class="tsd-anchor"></a>
 					<h3>where<wbr>Greater<wbr>OrEqual<wbr>Than</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wheregreaterorequalthan">whereGreaterOrEqualThan</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#wheregreaterorequalthan">whereGreaterOrEqualThan</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L162">src/AbstractFirestoreRepository.ts:162</a></li>
 								</ul>
@@ -878,17 +700,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="wheregreaterthan" class="tsd-anchor"></a>
 					<h3>where<wbr>Greater<wbr>Than</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Greater<wbr>Than<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wheregreaterthan">whereGreaterThan</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#wheregreaterthan">whereGreaterThan</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L144">src/AbstractFirestoreRepository.ts:144</a></li>
 								</ul>
@@ -926,17 +747,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="wherelessorequalthan" class="tsd-anchor"></a>
 					<h3>where<wbr>Less<wbr>OrEqual<wbr>Than</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Less<wbr>OrEqual<wbr>Than<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherelessorequalthan">whereLessOrEqualThan</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#wherelessorequalthan">whereLessOrEqualThan</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L198">src/AbstractFirestoreRepository.ts:198</a></li>
 								</ul>
@@ -974,17 +794,16 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="wherelessthan" class="tsd-anchor"></a>
 					<h3>where<wbr>Less<wbr>Than</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">where<wbr>Less<wbr>Than<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="../globals.html#iwherepropparam" class="tsd-signature-type">IWherePropParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, val<span class="tsd-signature-symbol">: </span><a href="../globals.html#ifirestoreval" class="tsd-signature-type">IFirestoreVal</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a>.<a href="../interfaces/iquerybuilder.html#wherelessthan">whereLessThan</a></p>
-								<p>Inherited from <a href="abstractfirestorerepository.html">AbstractFirestoreRepository</a>.<a href="abstractfirestorerepository.html#wherelessthan">whereLessThan</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/wovalle/fireorm/blob/2b8ddb7/src/AbstractFirestoreRepository.ts#L180">src/AbstractFirestoreRepository.ts:180</a></li>
 								</ul>
@@ -1040,114 +859,93 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/firestoreoperators.html" class="tsd-kind-icon">Firestore<wbr>Operators</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="abstractfirestorerepository.html" class="tsd-kind-icon">Abstract<wbr>Firestore<wbr>Repository</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#colmetadata" class="tsd-kind-icon">col<wbr>Metadata</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#colname" class="tsd-kind-icon">col<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#collectiontype" class="tsd-kind-icon">collection<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#docid" class="tsd-kind-icon">doc<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#subcolmetadata" class="tsd-kind-icon">sub<wbr>Col<wbr>Metadata</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#subcolname" class="tsd-kind-icon">sub<wbr>Col<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#execute" class="tsd-kind-icon">execute</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#extracttfromcolsnap" class="tsd-kind-icon">extractTFrom<wbr>Col<wbr>Snap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#extracttfromdocsnap" class="tsd-kind-icon">extractTFrom<wbr>Doc<wbr>Snap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#find" class="tsd-kind-icon">find</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#initializesubcollections" class="tsd-kind-icon">initialize<wbr>Sub<wbr>Collections</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#limit" class="tsd-kind-icon">limit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#toserializableobject" class="tsd-kind-icon">to<wbr>Serializable<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="abstractfirestorerepository.html#transformfirestoretypes" class="tsd-kind-icon">transform<wbr>Firestore<wbr>Types</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#whereequalto" class="tsd-kind-icon">where<wbr>Equal<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#wheregreaterorequalthan" class="tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#wheregreaterthan" class="tsd-kind-icon">where<wbr>Greater<wbr>Than</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#wherelessorequalthan" class="tsd-kind-icon">where<wbr>Less<wbr>OrEqual<wbr>Than</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="abstractfirestorerepository.html#wherelessthan" class="tsd-kind-icon">where<wbr>Less<wbr>Than</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="album.html" class="tsd-kind-icon">Album</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="band.html" class="tsd-kind-icon">Band</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="basefirestorerepository.html" class="tsd-kind-icon">Base<wbr>Firestore<wbr>Repository</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="basefirestorerepository.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#colmetadata" class="tsd-kind-icon">col<wbr>Metadata</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#colname" class="tsd-kind-icon">col<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#collectiontype" class="tsd-kind-icon">collection<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#docid" class="tsd-kind-icon">doc<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="basefirestorerepository.html#firestorecolref" class="tsd-kind-icon">firestore<wbr>Col<wbr>Ref</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#subcolmetadata" class="tsd-kind-icon">sub<wbr>Col<wbr>Metadata</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#subcolname" class="tsd-kind-icon">sub<wbr>Col<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#create" class="tsd-kind-icon">create</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#createbatch" class="tsd-kind-icon">create<wbr>Batch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#delete" class="tsd-kind-icon">delete</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="basefirestorerepository.html#execute" class="tsd-kind-icon">execute</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#extracttfromcolsnap" class="tsd-kind-icon">extractTFrom<wbr>Col<wbr>Snap</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#extracttfromdocsnap" class="tsd-kind-icon">extractTFrom<wbr>Doc<wbr>Snap</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#find" class="tsd-kind-icon">find</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#findbyid" class="tsd-kind-icon">find<wbr>ById</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#initializesubcollections" class="tsd-kind-icon">initialize<wbr>Sub<wbr>Collections</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#limit" class="tsd-kind-icon">limit</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#orderbyascending" class="tsd-kind-icon">order<wbr>ByAscending</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#orderbydescending" class="tsd-kind-icon">order<wbr>ByDescending</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#runtransaction" class="tsd-kind-icon">run<wbr>Transaction</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#toserializableobject" class="tsd-kind-icon">to<wbr>Serializable<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="basefirestorerepository.html#transformfirestoretypes" class="tsd-kind-icon">transform<wbr>Firestore<wbr>Types</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="basefirestorerepository.html#update" class="tsd-kind-icon">update</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#wherearraycontains" class="tsd-kind-icon">where<wbr>Array<wbr>Contains</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#whereequalto" class="tsd-kind-icon">where<wbr>Equal<wbr>To</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#wheregreaterorequalthan" class="tsd-kind-icon">where<wbr>Greater<wbr>OrEqual<wbr>Than</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#wheregreaterthan" class="tsd-kind-icon">where<wbr>Greater<wbr>Than</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#wherelessorequalthan" class="tsd-kind-icon">where<wbr>Less<wbr>OrEqual<wbr>Than</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="basefirestorerepository.html#wherelessthan" class="tsd-kind-icon">where<wbr>Less<wbr>Than</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="baserepository.html" class="tsd-kind-icon">Base<wbr>Repository</a>
 					</li>
