@@ -1,8 +1,8 @@
 import BaseFirestoreRepository from './BaseFirestoreRepository';
-import { getFixture, Album, Coordinates } from '../test/fixture';
+import { getFixture, Album } from '../test/fixture';
 import { expect } from 'chai';
-import { Collection, SubCollection, ISubCollection, Initialize } from '.';
-import { MetadataStorage, StoreScopes, IMetadataStore } from './MetadataStorage';
+import { Collection, SubCollection, ISubCollection, Initialize } from './index';
+import { MetadataStorage, StoreScopes } from './MetadataStorage';
 const MockFirebase = require('mock-cloud-firestore');
 import monkeyPatchFirestoreTran from '../test/monkey-patch-firestore-transaction';
 

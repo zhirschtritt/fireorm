@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import { Firestore } from '@google-cloud/firestore';
 
 import CustomRepository from './Decorators/CustomRepository';
 import Collection from './Decorators/Collection';
@@ -6,7 +7,6 @@ import Collection from './Decorators/Collection';
 import BaseFirestoreRepository from './BaseFirestoreRepository';
 import { GetRepository, GetBaseRepository } from './helpers';
 import { Initialize, MetadataStorage } from './MetadataStorage';
-import { Firestore } from '@google-cloud/firestore';
 
 describe('Helpers', () => {
   let store = null;
